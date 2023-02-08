@@ -1,0 +1,97 @@
+<!DOCTYPE html>     
+
+<html lang="es">    
+
+    <heat>          
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">              
+        <title>Encriptador Enigma </title>
+        <link rel="stylesheet" href="reset.css">       
+        <link rel="stylesheet" href="Style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    </heat>
+
+    <body>      
+
+        <header>
+            <div class="caja1">
+                <img class="logo" src="imagenes/logo.jpg" alt="Logo Encriptador Enigma">
+                <nav>
+                    <ul>
+                        <li><a href="Pagina-Principal.html">Principal</a></li>
+                        <li><a href="enigma-espias.html">Enigma Espias</a></li>
+                        <li><a href="enigma militar.html">Enigma Militar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+            
+
+        <main class="espias">
+            
+           <section>
+                
+                    <img class="Principal-espias" src="gif/hack_iran.gif" alt="">    
+                    <textarea class="text-area" cols="90" rows="40" placeholder="Ingrese el texto aqui" required></textarea>
+
+                    <div>
+                        <h6 class="información">*Solo letras minúsculas y sin acentos</h6>
+                    </div>
+                    <div class="botones">
+                        <button class="btn-encriptar" onclick="btnEncriptar">Encriptar</button>
+                        <button class="btn-desencriptar">Desencriptar</button>
+                    </div>
+                  
+           </section>
+           <section>
+                
+                <textarea class="mensaje" cols="60" rows="40" required></textarea>
+
+                <div class="boton">
+                    <button class="btn-copiar">Copiar</button>
+                    <button class="btn-enviar">Enviar</button>
+                </div>
+           </section>
+          
+        </main>
+        <script>
+            const textArea = document.querySelector(".text-area");
+            const mensaje = document.querySelector(".mensaje");
+
+// La letra "e" es convertida para "enter"
+// La letra "i" es convertida para "imes"
+// La letra "a" es convertida para "ai"
+// La letra "o" es convertida para "ober"
+// La letra "u" es convertida para "ufat"
+
+            function btnEncriptar(){
+                const textoEncriptado = encriptar(textArea.value);
+                mensaje.value = textoEncriptado;
+            }
+
+            function encriptar(stringEncriptado){
+                let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+                stringEncriptado = stringEncriptado.toLowerCase();
+
+                for(let i = 0; i < matrizCodigo.length; i++){
+                    if(stringEncriptado.includes(matrizCodigo[i][0])){
+                        stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+                    }
+                }
+                return stringEncriptado
+            }
+            
+
+        </script>
+        <footer class="pie-de-pagina-Espias">
+            <img class="pie-de-pagina" src="imagenes/logo.jpg">
+            <p class="copyright">&copy Copyright Barberia Alura - 2020</p>
+        </footer>
+
+    </body>
+
+</html> 

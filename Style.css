@@ -22,6 +22,11 @@ body{
 	position:relative;
     background:url(imagenes/encabezado-espias.jpg);
 }
+.caja2{
+	width: 100%;
+	position:relative;
+    background:url(imagenes/encabezado-militar.jpg);
+}
 
 .logo{
    width: 350px;
@@ -74,6 +79,9 @@ main{
 }
 .espias{
 	background-color: #426997;
+}
+.militar{
+	background-color: black;
 }
 
 .Principal{
@@ -194,7 +202,6 @@ main{
 	background-image: url(gif/lupa.gif);
 	background-repeat: no-repeat;
 	opacity: 60%;
-
 	border: none;
 	border-radius: 24px;
 	color: #0A3871;
@@ -204,10 +211,24 @@ main{
 	
 	
 }
+.mensaje1{
+	background: white;
+	background-image: url(gif/vinoculares.gif);
+	background-repeat: no-repeat;
+	opacity: 60%;
+	border: none;
+	border-radius: 24px;
+	color: #0A3871;
+	margin-left: 98px;
+	margin-top: 90px;
+	padding-left: 20px;
+}
 .mensaje:focus{
 	outline: none;
 }
-
+.mensaje1:focus{
+	outline: none;
+}
 /*footer*/
 
 .pie-de-pagina-Principal{
@@ -217,6 +238,12 @@ main{
 }
 
 .pie-de-pagina-Espias{
+    text-align: center;
+	background:url(imagenes/pie-de-pagina-espias.jpg);
+	padding: 40px;
+}
+
+.pie-de-pagina-Militar{
     text-align: center;
 	background:url(imagenes/pie-de-pagina-espias.jpg);
 	padding: 40px;

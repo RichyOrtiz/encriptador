@@ -17,7 +17,7 @@
     <body>      
 
         <header>
-            <div class="caja1">
+            <div class="caja2">
                 <img class="logo" src="imagenes/logo.jpg" alt="Logo Encriptador Enigma">
                 <nav>
                     <ul>
@@ -31,11 +31,11 @@
         
             
 
-        <main class="espias">
+        <main class="militar">
             
            <section>
                 
-                    <img class="Principal-espias" src="gif/Imagen-animada-Hacker-04.gif" alt="">    
+                    <img class="Principal-espias" src="gif/militar.gif" alt="">    
                     <textarea class="text-area" cols="90" rows="40" placeholder="Ingrese el texto aqui" required></textarea>
 
                     <div>
@@ -63,13 +63,21 @@
             const copia = document.querySelector(".btn-copiar");
 
 
-// La letra "e" es convertida para "enter"
-// La letra "i" es convertida para "imes"
-// La letra "a" es convertida para "ai"
-// La letra "o" es convertida para "ober"
-// La letra "u" es convertida para "ufat"
+// La letra "a" es convertida para "alfa"
+// La letra "b" es convertida para "bravo"
+// La letra "t" es convertida para "tango"
+// La letra "h" es convertida para "hotel"
+// La letra "c" es convertida para "charlie"
+// La letra "d" es convertida para "delta"
+// La letra "k" es convertida para "kilo"
+// La letra "m" es convertida para "mike"
+// La letra "s" es convertida para "sierra"
+// La letra "u" es convertida para "uniform"
+// La letra "z" es convertida para "zulu"
+// La letra "p" es convertida para "papa"
+// La letra "y" es convertida para "yankee"
 
-            function btnEncriptar(){
+function btnEncriptar(){
                 const textoEncriptado = encriptar(textArea.value);
                 mensaje.value = textoEncriptado;
                 textArea.value = "";
@@ -77,7 +85,7 @@
             }
 
             function encriptar(stringEncriptado){
-                let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+                let matrizCodigo = [["a", "alfa"], ["b", "bravo"], ["t", "tango"], ["h", "hotel"], ["c", "charlie"], ["d", "delta"], ["k", "kilo"], ["m", "mike"], ["s", "sierra"],["u", "uniform"], ["z", "zulu"], ["p", "papa"], ["y", "yankee"]];
                 stringEncriptado = stringEncriptado.toLowerCase();
 
                 for(let i = 0; i < matrizCodigo.length; i++){
@@ -97,7 +105,7 @@
 
             
             function desencriptar(stringDesencriptado){
-                let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+                let matrizCodigo = [["a", "alfa"], ["b", "bravo"], ["t", "tango"], ["h", "hotel"], ["c", "charlie"], ["d", "delta"], ["k", "kilo"], ["m", "mike"], ["s", "sierra"],["u", "uniform"], ["z", "zulu"], ["p", "papa"], ["y", "yankee"]];
                 stringDesencriptado = stringDesencriptado.toLowerCase();
 
                 for(let i = 0; i < matrizCodigo.length; i++){
